@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Log Aggregator - Live Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .status.connected { background: #10b981; }
+        .status.disconnected { background: #ef4444; }
+        .status.connecting { background: #f59e0b; }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .metric-title {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .channels-list {
+            list-style: none;
+        }
+        
+        .channels-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .channels-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .log {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .log-entry {
+            margin-bottom: 5px;
+            opacity: 0.8;
+        }
+        
+        .timestamp {
+            color: #10b981;
+        }
+        
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔄 Event-Log Aggregator</h1>
+            <p>Live Metrics Dashboard</p>
+            <div id="connection-status" class="status connecting">Connecting...</div>
+        </div>
+        
+        <div class="controls">
+            <a href="/swagger-ui.html" class="btn" target="_blank">📊 API Docs</a>
+            <a href="/actuator/health" class="btn" target="_blank">🏥 Health</a>
+            <button class="btn" onclick="sendTestEvent()">🧪 Send Test Event</button>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Active Users</div>
+                <div id="active-users" class="metric-value">-</div>
+                <div class="metric-subtitle">Last hour</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-title">Events per Minute</div>
+                <div id="events-per-minute" class="metric-value">-</div>
+                <div class="metric-subtitle">Average rate</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-title">Time Window</div>
+                <div id="time-window" class="metric-value">-</div>
+                <div class="metric-subtitle">Current aggregation</div>
+            </div>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Top Channels</div>
+                <ul id="top-channels" class="channels-list">
+                    <li>No data yet...</li>
+                </ul>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-title">Live Log</div>
+                <div id="live-log" class="log">
+                    <div class="log-entry">Waiting for events...</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Last update: <span id="last-update">Never</span></p>
+            <p>Event-Log Aggregator - Knuddels Portfolio Project</p>
+        </div>
+    </div>
+    
+    <script>
+        let eventSource;
+        let connectionStatus = document.getElementById('connection-status');
+        let isConnected = false;
+        
+        function connectToStream() {
+            connectionStatus.textContent = 'Connecting...';
+            connectionStatus.className = 'status connecting';
+            
+            eventSource = new EventSource('/stream');
+            
+            eventSource.onopen = function() {
+                isConnected = true;
+                connectionStatus.textContent = 'Connected';
+                connectionStatus.className = 'status connected';
+                addLogEntry('Connected to live stream');
+            };
+            
+            eventSource.onmessage = function(event) {
+                handleMetricsUpdate(JSON.parse(event.data));
+            };
+            
+            eventSource.addEventListener('metrics', function(event) {
+                handleMetricsUpdate(JSON.parse(event.data));
+            });
+            
+            eventSource.addEventListener('initial', function(event) {
+                handleMetricsUpdate(JSON.parse(event.data));
+            });
+            
+            eventSource.addEventListener('status', function(event) {
+                const data = JSON.parse(event.data);
+                addLogEntry(data.message || 'Status update received');
+            });
+            
+            eventSource.onerror = function() {
+                isConnected = false;
+                connectionStatus.textContent = 'Disconnected';
+                connectionStatus.className = 'status disconnected';
+                addLogEntry('Connection lost, retrying...');
+                
+                // Retry connection after 5 seconds
+                setTimeout(() => {
+                    if (!isConnected) {
+                        connectToStream();
+                    }
+                }, 5000);
+            };
+        }
+        
+        function handleMetricsUpdate(data) {
+            document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+            
+            if (data.metrics) {
+                const metrics = data.metrics;
+                
+                document.getElementById('active-users').textContent = metrics.activeUsers || '-';
+                document.getElementById('events-per-minute').textContent = metrics.eventsPerMinute || '-';
+                document.getElementById('time-window').textContent = formatDuration(metrics.window) || '-';
+                
+                updateTopChannels(metrics.topChannels || []);
+                
+                addLogEntry(`Metrics updated: ${metrics.activeUsers} users, ${metrics.eventsPerMinute} events/min`);
+            } else if (data.message) {
+                addLogEntry(data.message);
+            }
+        }
+        
+        function updateTopChannels(channels) {
+            const list = document.getElementById('top-channels');
+            
+            if (channels.length === 0) {
+                list.innerHTML = '<li>No channel data yet...</li>';
+                return;
+            }
+            
+            list.innerHTML = channels.map(channel => 
+                `<li><span>${channel.channel}</span><span>${channel.count} events</span></li>`
+            ).join('');
+        }
+        
+        function formatDuration(duration) {
+            if (!duration) return '-';
+            
+            if (duration === 'PT1H') return '1 Hour';
+            if (duration === 'PT1D' || duration === 'PT24H') return '24 Hours';
+            if (duration === 'PT7D' || duration === 'P7D') return '7 Days';
+            
+            return duration;
+        }
+        
+        function addLogEntry(message) {
+            const log = document.getElementById('live-log');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            
+            const timestamp = new Date().toLocaleTimeString();
+            entry.innerHTML = `<span class="timestamp">[${timestamp}]</span> ${message}`;
+            
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+            
+            // Keep only last 20 entries
+            const entries = log.querySelectorAll('.log-entry');
+            if (entries.length > 20) {
+                log.removeChild(entries[0]);
+            }
+        }
+        
+        async function sendTestEvent() {
+            try {
+                const response = await fetch('/events', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        type: 'MESSAGE',
+                        timestamp: new Date().toISOString(),
+                        userId: 'dashboard-user-' + Math.random().toString(36).substr(2, 9),
+                        payload: {
+                            channel: '#dashboard-test',
+                            message: 'Test event from dashboard'
+                        }
+                    })
+                });
+                
+                if (response.ok) {
+                    addLogEntry('Test event sent successfully');
+                } else {
+                    addLogEntry('Failed to send test event');
+                }
+            } catch (error) {
+                addLogEntry('Error sending test event: ' + error.message);
+            }
+        }
+        
+        // Start the connection when page loads
+        connectToStream();
+    </script>
+</body>
+</html> 

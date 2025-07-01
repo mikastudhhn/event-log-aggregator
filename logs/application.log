@@ -1,0 +1,996 @@
+2025-07-02T00:19:07.625+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Starting EventLogAggregatorApplication using Java 17.0.15 with PID 6345 (/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes started by mikahoft in /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator)
+2025-07-02T00:19:07.625+02:00 DEBUG 6345 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-02T00:19:07.626+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T00:19:07.667+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-02T00:19:07.667+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-02T00:19:09.106+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T00:19:09.116+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T00:19:09.116+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T00:19:09.140+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T00:19:09.141+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1472 ms
+2025-07-02T00:19:09.393+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.EventParser              : Event schema loaded successfully
+2025-07-02T00:19:09.399+02:00  WARN 6345 --- [event-log-aggregator] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eventController' defined in file [/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes/de/mika/hhn/eventlogaggregator/controller/EventController.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'metricAggregator' defined in file [/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes/de/mika/hhn/eventlogaggregator/service/MetricAggregator.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ela-de.mika.hhn.eventlogaggregator.config.ElaProperties': Could not bind properties to 'ElaProperties' : prefix=ela, ignoreInvalidFields=false, ignoreUnknownFields=true
+2025-07-02T00:19:09.400+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-07-02T00:19:09.417+02:00  INFO 6345 --- [event-log-aggregator] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-02T00:19:09.428+02:00 ERROR 6345 --- [event-log-aggregator] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'ela.aggregation.windows.daily' to java.time.Duration:
+
+    Property: ela.aggregation.windows.daily
+    Value: "PT1D"
+    Origin: class path resource [application.yml] - 8:14
+    Reason: failed to convert java.lang.String to java.time.Duration (caused by java.time.format.DateTimeParseException: Text cannot be parsed to a Duration)
+
+Action:
+
+Update your application's configuration
+
+2025-07-02T00:19:49.452+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Starting EventLogAggregatorApplication using Java 17.0.15 with PID 6411 (/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes started by mikahoft in /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator)
+2025-07-02T00:19:49.452+02:00 DEBUG 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-02T00:19:49.453+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T00:19:49.474+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-02T00:19:49.474+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-02T00:19:51.621+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T00:19:51.634+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T00:19:51.634+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T00:19:51.666+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T00:19:51.667+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2192 ms
+2025-07-02T00:19:51.945+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.EventParser              : Event schema loaded successfully
+2025-07-02T00:19:51.967+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.MetricAggregator         : Initialized metric windows: hourly=PT1H, daily=PT24H, weekly=PT168H
+2025-07-02T00:19:51.972+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.controller.StreamController      : Started metrics streaming with 10000ms interval
+2025-07-02T00:19:52.036+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.DirectoryWatcher         : Started directory watching on: /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/data/inbox
+2025-07-02T00:19:52.036+02:00  INFO 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread started
+2025-07-02T00:19:52.428+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-02T00:19:52.432+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-07-02T00:19:52.563+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-02T00:19:52.586+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:52.587+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:52.587+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Started EventLogAggregatorApplication in 3.442 seconds (process running for 4.185)
+2025-07-02T00:19:52.587+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:52.587+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:19:52.587+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:19:52.592+02:00  INFO 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : System Health - Events in windows: hourly=0, daily=0, weekly=0
+2025-07-02T00:19:52.594+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : ✅ Event-Log Aggregator is ready!
+2025-07-02T00:19:52.594+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📊 Swagger UI: http://localhost:8080/swagger-ui.html
+2025-07-02T00:19:52.594+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📈 Metrics API: http://localhost:8080/metrics/hourly
+2025-07-02T00:19:52.594+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🔄 Live Stream: http://localhost:8080/stream
+2025-07-02T00:19:52.594+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📥 Event Submission: POST http://localhost:8080/events
+2025-07-02T00:19:52.594+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🏥 Health Check: http://localhost:8080/actuator/health
+2025-07-02T00:19:53.476+02:00  INFO 6411 --- [event-log-aggregator] [RMI TCP Connection(1)-192.168.102.62] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02T00:19:53.478+02:00  INFO 6411 --- [event-log-aggregator] [RMI TCP Connection(1)-192.168.102.62] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-02T00:19:53.481+02:00  INFO 6411 --- [event-log-aggregator] [RMI TCP Connection(1)-192.168.102.62] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-02T00:19:53.585+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:53.585+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:53.586+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:53.586+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:19:53.586+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:19:54.586+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:54.586+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:54.586+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:54.587+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:19:54.587+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:19:55.290+02:00  INFO 6411 --- [event-log-aggregator] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 22 deletions, 3 modifications)
+2025-07-02T00:19:55.316+02:00  INFO 6411 --- [event-log-aggregator] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02T00:19:55.341+02:00  INFO 6411 --- [event-log-aggregator] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-02T00:19:55.358+02:00  INFO 6411 --- [event-log-aggregator] [Thread-5] d.m.h.e.service.DirectoryWatcher         : Stopped directory watching
+2025-07-02T00:19:55.358+02:00 ERROR 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Error in directory watcher: null
+
+java.nio.file.ClosedWatchServiceException: null
+	at java.base/sun.nio.fs.AbstractWatchService.checkOpen(AbstractWatchService.java:80) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.checkKey(AbstractWatchService.java:92) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:119) ~[na:na]
+	at de.mika.hhn.eventlogaggregator.service.DirectoryWatcher.watchDirectory(DirectoryWatcher.java:93) ~[classes/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-07-02T00:19:55.363+02:00  INFO 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread stopped
+2025-07-02T00:19:55.596+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🚀 Starting Event-Log Aggregator...
+2025-07-02T00:19:55.694+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Starting EventLogAggregatorApplication using Java 17.0.15 with PID 6411 (/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes started by mikahoft in /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator)
+2025-07-02T00:19:55.695+02:00 DEBUG 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-02T00:19:55.695+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T00:19:56.389+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T00:19:56.390+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T00:19:56.390+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T00:19:56.406+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T00:19:56.406+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 708 ms
+2025-07-02T00:19:56.743+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-02T00:19:56.746+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-07-02T00:19:56.796+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-02T00:19:56.811+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Started EventLogAggregatorApplication in 1.21 seconds (process running for 8.408)
+2025-07-02T00:19:56.814+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-02T00:19:56.814+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : ✅ Event-Log Aggregator is ready!
+2025-07-02T00:19:56.814+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📊 Swagger UI: http://localhost:8080/swagger-ui.html
+2025-07-02T00:19:56.814+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📈 Metrics API: http://localhost:8080/metrics/hourly
+2025-07-02T00:19:56.814+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🔄 Live Stream: http://localhost:8080/stream
+2025-07-02T00:19:56.814+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📥 Event Submission: POST http://localhost:8080/events
+2025-07-02T00:19:56.815+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🏥 Health Check: http://localhost:8080/actuator/health
+2025-07-02T00:19:58.194+02:00  INFO 6411 --- [event-log-aggregator] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 22 class path changes (22 additions, 0 deletions, 0 modifications)
+2025-07-02T00:19:58.218+02:00  INFO 6411 --- [event-log-aggregator] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02T00:19:58.236+02:00  INFO 6411 --- [event-log-aggregator] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-02T00:19:58.337+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🚀 Starting Event-Log Aggregator...
+2025-07-02T00:19:58.368+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Starting EventLogAggregatorApplication using Java 17.0.15 with PID 6411 (/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes started by mikahoft in /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator)
+2025-07-02T00:19:58.368+02:00 DEBUG 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-02T00:19:58.368+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T00:19:58.954+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T00:19:58.955+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T00:19:58.955+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T00:19:58.963+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T00:19:58.963+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2025-07-02T00:19:59.019+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.EventParser              : Event schema loaded successfully
+2025-07-02T00:19:59.030+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.MetricAggregator         : Initialized metric windows: hourly=PT1H, daily=PT24H, weekly=PT168H
+2025-07-02T00:19:59.034+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.controller.StreamController      : Started metrics streaming with 10000ms interval
+2025-07-02T00:19:59.036+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.DirectoryWatcher         : Started directory watching on: /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/data/inbox
+2025-07-02T00:19:59.036+02:00  INFO 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread started
+2025-07-02T00:19:59.199+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-02T00:19:59.201+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-07-02T00:19:59.246+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-02T00:19:59.260+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:59.260+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:59.260+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:19:59.260+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:19:59.260+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:19:59.261+02:00  INFO 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : System Health - Events in windows: hourly=0, daily=0, weekly=0
+2025-07-02T00:19:59.262+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Started EventLogAggregatorApplication in 0.922 seconds (process running for 10.86)
+2025-07-02T00:19:59.264+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-02T00:19:59.264+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : ✅ Event-Log Aggregator is ready!
+2025-07-02T00:19:59.264+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📊 Swagger UI: http://localhost:8080/swagger-ui.html
+2025-07-02T00:19:59.264+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📈 Metrics API: http://localhost:8080/metrics/hourly
+2025-07-02T00:19:59.264+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🔄 Live Stream: http://localhost:8080/stream
+2025-07-02T00:19:59.264+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📥 Event Submission: POST http://localhost:8080/events
+2025-07-02T00:19:59.264+02:00  INFO 6411 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🏥 Health Check: http://localhost:8080/actuator/health
+2025-07-02T00:20:00.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:00.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:00.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:00.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:00.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:01.235+02:00  INFO 6411 --- [event-log-aggregator] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02T00:20:01.235+02:00  INFO 6411 --- [event-log-aggregator] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-02T00:20:01.237+02:00  INFO 6411 --- [event-log-aggregator] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-02T00:20:01.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:01.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:01.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:01.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:01.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:02.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:02.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:02.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:02.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:02.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:03.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:03.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:03.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:03.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:03.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:04.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:04.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:04.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:04.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:04.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:05.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:05.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:05.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:05.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:05.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:06.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:06.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:06.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:06.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:06.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:07.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:07.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:07.268+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:07.269+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:07.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:08.260+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:08.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:08.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:08.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:08.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:09.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:09.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:09.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:09.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:09.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:09.868+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-3] d.m.h.e.controller.EventController       : Received single event via HTTP POST
+2025-07-02T00:20:09.984+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-3] d.m.h.e.service.EventParser              : Successfully parsed event: type=LOGIN, userId=testuser123
+2025-07-02T00:20:09.985+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-3] d.m.h.e.service.MetricAggregator         : Added event to aggregation: type=LOGIN, userId=testuser123
+2025-07-02T00:20:09.985+02:00  INFO 6411 --- [event-log-aggregator] [http-nio-8080-exec-3] d.m.h.e.controller.EventController       : Successfully processed event: type=LOGIN, userId=testuser123
+2025-07-02T00:20:10.003+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-5] d.m.h.e.controller.EventController       : Received batch events via HTTP POST
+2025-07-02T00:20:10.011+02:00  WARN 6411 --- [event-log-aggregator] [http-nio-8080-exec-5] d.m.h.e.controller.EventController       : No valid events found in batch
+2025-07-02T00:20:10.042+02:00  INFO 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Detected ENTRY_CREATE event for file: sample-events.json
+2025-07-02T00:20:10.148+02:00  INFO 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Processing event file: sample-events.json
+2025-07-02T00:20:10.149+02:00  INFO 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.EventParser              : Parsed 0 events from file: sample-events.json
+2025-07-02T00:20:10.149+02:00  WARN 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : No valid events found in file: sample-events.json
+2025-07-02T00:20:10.151+02:00 DEBUG 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Moved invalid file to: data/inbox/invalid/sample-events.json
+2025-07-02T00:20:10.271+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:10.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:10.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:10.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:10.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:11.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:11.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:11.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:11.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:11.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:12.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:12.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:12.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:12.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:12.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:13.048+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-6] d.m.h.e.controller.MetricsController     : Retrieving hourly metrics
+2025-07-02T00:20:13.049+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-6] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:13.050+02:00  INFO 6411 --- [event-log-aggregator] [http-nio-8080-exec-6] d.m.h.e.controller.MetricsController     : Retrieved hourly metrics: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:13.073+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-8] d.m.h.e.controller.MetricsController     : Retrieving top 3 channels
+2025-07-02T00:20:13.074+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-8] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:13.074+02:00  INFO 6411 --- [event-log-aggregator] [http-nio-8080-exec-8] d.m.h.e.controller.MetricsController     : Retrieved 0 top channels
+2025-07-02T00:20:13.120+02:00 DEBUG 6411 --- [event-log-aggregator] [http-nio-8080-exec-4] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:13.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:13.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:13.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:13.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:13.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:14.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:14.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:14.268+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:14.268+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:14.268+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:15.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:15.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:15.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:15.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:15.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:16.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:16.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:16.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:16.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:16.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:17.269+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:17.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:17.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:17.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:17.272+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:18.288+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:18.293+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:18.293+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:18.293+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:18.293+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:19.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:19.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:19.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:19.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:19.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:20.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:20.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:20.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:20.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:20.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:21.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:21.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:21.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:21.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:21.263+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:22.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:22.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:22.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:22.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:22.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:23.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:23.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:23.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:23.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:23.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:24.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:24.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:24.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:24.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:24.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:25.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:25.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:25.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:25.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:25.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:26.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:26.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:26.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:26.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:26.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:27.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:27.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:27.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:27.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:27.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:28.264+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:28.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:28.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:28.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:28.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:29.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:29.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:29.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:29.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:29.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:30.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:30.261+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:30.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:30.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:30.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:31.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:31.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:31.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:31.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:31.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:32.268+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:32.269+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:32.269+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:32.269+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:32.269+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:33.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:33.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:33.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:33.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:33.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:34.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:34.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:34.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:34.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:34.267+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:35.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:35.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:35.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:35.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:35.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:36.262+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:36.263+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:36.263+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:36.263+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:36.263+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:37.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:37.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:37.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:37.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:37.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:38.265+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:38.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:38.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:20:38.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:38.266+02:00 DEBUG 6411 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:38.765+02:00  INFO 6411 --- [event-log-aggregator] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02T00:20:38.768+02:00  INFO 6411 --- [event-log-aggregator] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-02T00:20:38.786+02:00  INFO 6411 --- [event-log-aggregator] [SpringApplicationShutdownHook] d.m.h.e.service.DirectoryWatcher         : Stopped directory watching
+2025-07-02T00:20:38.787+02:00 ERROR 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Error in directory watcher: null
+
+java.nio.file.ClosedWatchServiceException: null
+	at java.base/sun.nio.fs.AbstractWatchService.checkOpen(AbstractWatchService.java:80) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.checkKey(AbstractWatchService.java:92) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:119) ~[na:na]
+	at de.mika.hhn.eventlogaggregator.service.DirectoryWatcher.watchDirectory(DirectoryWatcher.java:93) ~[classes/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-07-02T00:20:38.790+02:00  INFO 6411 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread stopped
+2025-07-02T00:20:46.134+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Starting EventLogAggregatorApplication using Java 17.0.15 with PID 6586 (/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes started by mikahoft in /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator)
+2025-07-02T00:20:46.134+02:00 DEBUG 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-02T00:20:46.135+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T00:20:46.158+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-02T00:20:46.158+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-02T00:20:46.999+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T00:20:47.008+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T00:20:47.008+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T00:20:47.032+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T00:20:47.032+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 873 ms
+2025-07-02T00:20:47.256+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.EventParser              : Event schema loaded successfully
+2025-07-02T00:20:47.276+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.MetricAggregator         : Initialized metric windows: hourly=PT1H, daily=PT24H, weekly=PT168H
+2025-07-02T00:20:47.280+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.controller.StreamController      : Started metrics streaming with 10000ms interval
+2025-07-02T00:20:47.341+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.DirectoryWatcher         : Started directory watching on: /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/data/inbox
+2025-07-02T00:20:47.341+02:00  INFO 6586 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread started
+2025-07-02T00:20:47.671+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-02T00:20:47.674+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-07-02T00:20:47.759+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-02T00:20:47.783+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Started EventLogAggregatorApplication in 1.923 seconds (process running for 2.489)
+2025-07-02T00:20:47.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:47.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:47.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:47.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:47.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:47.787+02:00  INFO 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : System Health - Events in windows: hourly=0, daily=0, weekly=0
+2025-07-02T00:20:47.790+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : ✅ Event-Log Aggregator is ready!
+2025-07-02T00:20:47.790+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📊 Swagger UI: http://localhost:8080/swagger-ui.html
+2025-07-02T00:20:47.791+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📈 Metrics API: http://localhost:8080/metrics/hourly
+2025-07-02T00:20:47.791+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🔄 Live Stream: http://localhost:8080/stream
+2025-07-02T00:20:47.791+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📥 Event Submission: POST http://localhost:8080/events
+2025-07-02T00:20:47.791+02:00  INFO 6586 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🏥 Health Check: http://localhost:8080/actuator/health
+2025-07-02T00:20:48.111+02:00  INFO 6586 --- [event-log-aggregator] [RMI TCP Connection(2)-192.168.102.62] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02T00:20:48.111+02:00  INFO 6586 --- [event-log-aggregator] [RMI TCP Connection(2)-192.168.102.62] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-02T00:20:48.112+02:00  INFO 6586 --- [event-log-aggregator] [RMI TCP Connection(2)-192.168.102.62] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-02T00:20:48.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:48.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:48.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:48.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:48.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:49.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:49.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:49.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:49.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:49.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:50.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:50.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:50.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:50.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:50.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:51.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:51.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:51.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:51.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:51.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:52.827+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:52.827+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:52.827+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:52.827+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:52.828+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:53.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:53.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:53.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:53.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:53.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:54.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:54.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:54.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:54.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:54.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:55.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:55.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:55.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:55.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:55.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:56.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:56.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:56.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:56.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:56.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:57.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:57.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:57.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:57.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:57.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:58.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:58.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:58.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:58.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:58.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:20:59.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:59.784+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:59.784+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:20:59.784+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:20:59.784+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:00.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:00.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:00.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:00.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:00.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:01.776+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:01.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:01.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:01.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:01.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:02.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:02.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:02.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:02.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:02.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:03.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:03.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:03.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:03.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:03.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:04.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:04.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:04.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:04.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:04.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:05.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:05.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:05.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:05.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:05.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:06.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:06.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:06.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:06.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:06.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:07.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:08.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:08.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:08.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:08.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:08.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:09.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:09.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:10.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:10.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:10.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:10.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:10.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:11.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:11.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:11.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:11.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:11.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:12.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:12.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:12.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:12.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:12.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:13.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:13.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:13.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:13.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:13.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:14.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:14.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:14.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:14.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:14.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:15.089+02:00  INFO 6586 --- [event-log-aggregator] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 317 ms
+2025-07-02T00:21:15.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:15.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:15.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:15.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:15.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:16.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:16.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:16.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:16.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:16.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:17.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:17.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:17.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:17.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:17.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:18.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:18.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:18.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:18.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:18.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:19.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:19.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:19.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:19.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:19.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:20.776+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:20.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:20.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:20.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:20.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:21.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:21.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:21.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:21.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:21.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:22.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:22.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:22.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:22.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:22.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:23.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:23.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:23.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:23.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:23.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:24.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:24.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:24.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:24.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:24.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:25.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:25.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:25.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:25.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:25.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:26.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:26.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:26.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:26.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:26.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:27.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:27.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:27.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:27.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:27.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:28.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:28.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:28.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:28.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:28.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:29.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:29.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:29.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:29.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:29.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:30.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:30.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:30.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:30.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:30.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:31.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:31.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:31.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:31.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:31.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:32.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:32.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:32.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:32.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:32.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:33.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:33.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:33.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:33.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:33.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:34.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:34.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:34.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:34.784+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:34.784+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:35.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:35.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:35.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:35.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:35.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:36.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:36.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:36.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:36.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:36.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:37.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:37.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:37.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:37.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:37.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:38.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:38.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:38.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:38.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:38.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:39.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:39.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:39.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:39.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:39.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:40.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:40.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:40.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:40.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:40.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:41.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:41.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:41.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:41.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:41.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:42.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:42.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:42.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:42.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:42.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:43.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:43.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:43.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:43.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:43.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:44.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:44.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:44.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:44.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:44.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:45.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:45.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:45.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:45.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:45.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:46.776+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:46.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:46.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:46.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:46.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:47.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:47.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:47.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:47.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:47.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:47.780+02:00  INFO 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : System Health - Events in windows: hourly=0, daily=0, weekly=0
+2025-07-02T00:21:48.776+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:48.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:48.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:48.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:48.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:49.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:49.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:49.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:49.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:49.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:50.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:50.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:50.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:50.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:50.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:51.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:51.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:51.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:51.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:51.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:52.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:52.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:52.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:52.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:52.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:53.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:53.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:53.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:53.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:53.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:54.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:54.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:54.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:54.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:54.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:55.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:55.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:55.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:55.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:55.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:56.776+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:56.776+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:56.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:56.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:56.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:57.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:57.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:57.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:57.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:57.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:58.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:58.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:58.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:58.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:58.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:21:59.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:59.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:59.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:21:59.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:21:59.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:00.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:00.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:00.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:00.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:00.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:01.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:01.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:01.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:01.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:01.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:02.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:02.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:02.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:02.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:02.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:03.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:03.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:03.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:03.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:03.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:04.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:04.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:04.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:04.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:04.783+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:05.349+02:00 DEBUG 6586 --- [event-log-aggregator] [http-nio-8080-exec-1] d.m.h.e.controller.MetricsController     : Retrieving hourly metrics
+2025-07-02T00:22:05.350+02:00 DEBUG 6586 --- [event-log-aggregator] [http-nio-8080-exec-1] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:05.350+02:00  INFO 6586 --- [event-log-aggregator] [http-nio-8080-exec-1] d.m.h.e.controller.MetricsController     : Retrieved hourly metrics: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:05.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:05.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:05.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:05.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:05.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:06.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:06.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:06.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:06.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:06.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:07.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:07.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:08.794+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:08.799+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:08.799+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:08.799+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:08.799+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:09.598+02:00  INFO 6586 --- [event-log-aggregator] [http-nio-8080-exec-2] d.m.h.e.controller.StreamController      : New SSE connection established: conn_1751408529587
+2025-07-02T00:22:09.612+02:00 DEBUG 6586 --- [event-log-aggregator] [http-nio-8080-exec-2] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:09.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:10.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:10.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:10.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:10.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:10.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:11.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:11.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:11.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:11.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:11.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:12.814+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:12.818+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:12.818+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:12.818+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:12.818+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:12.849+02:00  WARN 6586 --- [event-log-aggregator] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-07-02T00:22:13.784+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:13.785+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:13.785+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:13.785+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:13.785+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:14.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:14.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:14.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:14.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:14.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:15.780+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:15.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:15.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:15.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:15.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:16.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:16.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:16.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:16.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:16.777+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:17.286+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:17.290+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.controller.StreamController      : Broadcasted metrics to 1 active connections
+2025-07-02T00:22:17.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:17.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:17.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:17.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:17.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:18.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:18.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:18.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:18.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:18.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:19.787+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:19.789+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:19.789+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:19.789+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:19.789+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:20.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:20.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:20.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:20.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:20.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:21.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:21.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:21.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:21.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:21.781+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:22.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:22.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:22.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:22.778+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:22.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:23.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:23.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:23.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:23.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:23.779+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:24.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:24.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT24H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:24.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.s.InMemoryMetricRepository       : Saved metrics for window PT168H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:24.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.MetricAggregator         : Completed metric aggregation for all windows
+2025-07-02T00:22:24.782+02:00 DEBUG 6586 --- [event-log-aggregator] [scheduling-1] d.m.h.e.service.AggregatorScheduler      : Scheduled metric aggregation completed successfully
+2025-07-02T00:22:24.940+02:00  INFO 6586 --- [event-log-aggregator] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02T00:22:27.287+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:27.303+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.controller.StreamController      : Broadcasted metrics to 1 active connections
+2025-07-02T00:22:37.287+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:37.292+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.controller.StreamController      : Broadcasted metrics to 1 active connections
+2025-07-02T00:22:47.282+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.s.InMemoryMetricRepository       : Retrieved metrics for window PT1H: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:22:47.284+02:00 DEBUG 6586 --- [event-log-aggregator] [pool-3-thread-1] d.m.h.e.controller.StreamController      : Broadcasted metrics to 1 active connections
+2025-07-02T00:22:54.964+02:00  INFO 6586 --- [event-log-aggregator] [SpringApplicationShutdownHook] o.s.c.support.DefaultLifecycleProcessor  : Shutdown phase 2147482623 ends with 1 bean still running after timeout of 30000ms: [webServerGracefulShutdown]
+2025-07-02T00:22:54.969+02:00  WARN 6586 --- [event-log-aggregator] [http-nio-8080-exec-7] d.m.h.e.controller.StreamController      : SSE connection timed out: conn_1751408529587
+2025-07-02T00:22:54.983+02:00  WARN 6586 --- [event-log-aggregator] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.web.context.request.async.AsyncRequestTimeoutException
+2025-07-02T00:22:54.983+02:00  WARN 6586 --- [event-log-aggregator] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2025-07-02T00:22:54.984+02:00  INFO 6586 --- [event-log-aggregator] [http-nio-8080-exec-7] d.m.h.e.controller.StreamController      : SSE connection completed: conn_1751408529587
+2025-07-02T00:22:54.993+02:00  INFO 6586 --- [event-log-aggregator] [SpringApplicationShutdownHook] d.m.h.e.service.DirectoryWatcher         : Stopped directory watching
+2025-07-02T00:22:54.993+02:00 ERROR 6586 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Error in directory watcher: null
+
+java.nio.file.ClosedWatchServiceException: null
+	at java.base/sun.nio.fs.AbstractWatchService.checkOpen(AbstractWatchService.java:80) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.checkKey(AbstractWatchService.java:92) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:119) ~[na:na]
+	at de.mika.hhn.eventlogaggregator.service.DirectoryWatcher.watchDirectory(DirectoryWatcher.java:93) ~[classes/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-07-02T00:22:54.997+02:00  INFO 6586 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread stopped
+2025-07-02T00:25:20.990+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Starting EventLogAggregatorApplication using Java 23.0.2 with PID 7077 (/Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/target/classes started by mikahoft in /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator)
+2025-07-02T00:25:20.991+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T00:25:21.046+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-02T00:25:21.047+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-02T00:25:23.797+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T00:25:23.819+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T00:25:23.820+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T00:25:23.871+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T00:25:23.872+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2825 ms
+2025-07-02T00:25:24.310+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.EventParser              : Event schema loaded successfully
+2025-07-02T00:25:24.335+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.MetricAggregator         : Initialized metric windows: hourly=PT1H, daily=PT24H, weekly=PT168H
+2025-07-02T00:25:24.341+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.controller.StreamController      : Started metrics streaming with 10000ms interval
+2025-07-02T00:25:24.409+02:00  INFO 7077 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread started
+2025-07-02T00:25:24.409+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.service.DirectoryWatcher         : Started directory watching on: /Users/mikahoft/Documents/UG/portfolio/event-log-aggregator/data/inbox
+2025-07-02T00:25:24.740+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-02T00:25:24.744+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-07-02T00:25:24.840+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-02T00:25:24.854+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : Started EventLogAggregatorApplication in 4.51 seconds (process running for 4.765)
+2025-07-02T00:25:24.913+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : ✅ Event-Log Aggregator is ready!
+2025-07-02T00:25:24.914+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📊 Swagger UI: http://localhost:8080/swagger-ui.html
+2025-07-02T00:25:24.914+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📈 Metrics API: http://localhost:8080/metrics/hourly
+2025-07-02T00:25:24.914+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🔄 Live Stream: http://localhost:8080/stream
+2025-07-02T00:25:24.914+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 📥 Event Submission: POST http://localhost:8080/events
+2025-07-02T00:25:24.914+02:00  INFO 7077 --- [event-log-aggregator] [restartedMain] d.m.h.e.EventLogAggregatorApplication    : 🏥 Health Check: http://localhost:8080/actuator/health
+2025-07-02T00:25:46.816+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02T00:25:46.817+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-02T00:25:46.821+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-02T00:25:54.161+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-3] d.m.h.e.controller.MetricsController     : Retrieved hourly metrics: activeUsers=0, eventsPerMinute=0
+2025-07-02T00:26:00.654+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-5] d.m.h.e.controller.EventController       : Successfully processed event: type=MESSAGE, userId=testuser123
+2025-07-02T00:26:09.384+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-7] d.m.h.e.controller.MetricsController     : Retrieved hourly metrics: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:26:16.415+02:00  INFO 7077 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Detected ENTRY_CREATE event for file: sample-events.json
+2025-07-02T00:26:16.521+02:00  INFO 7077 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Processing event file: sample-events.json
+2025-07-02T00:26:16.538+02:00  INFO 7077 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.EventParser              : Parsed 0 events from file: sample-events.json
+2025-07-02T00:26:16.539+02:00  WARN 7077 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : No valid events found in file: sample-events.json
+2025-07-02T00:26:20.870+02:00  WARN 7077 --- [event-log-aggregator] [http-nio-8080-exec-9] d.m.h.e.controller.EventController       : No valid events found in batch
+2025-07-02T00:26:27.313+02:00  WARN 7077 --- [event-log-aggregator] [http-nio-8080-exec-10] d.m.h.e.controller.EventController       : No valid events found in batch
+2025-07-02T00:26:35.770+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-1] d.m.h.e.controller.MetricsController     : Retrieved hourly metrics: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:26:39.850+02:00  INFO 7077 --- [event-log-aggregator] [http-nio-8080-exec-7] d.m.h.e.controller.MetricsController     : Retrieved hourly metrics: activeUsers=1, eventsPerMinute=0
+2025-07-02T00:27:06.572+02:00  WARN 7077 --- [event-log-aggregator] [http-nio-8080-exec-1] d.m.h.e.controller.EventController       : No valid events found in batch
+2025-07-02T00:35:19.172+02:00  INFO 7077 --- [event-log-aggregator] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02T00:35:19.202+02:00  INFO 7077 --- [event-log-aggregator] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-02T00:35:19.216+02:00  INFO 7077 --- [event-log-aggregator] [SpringApplicationShutdownHook] d.m.h.e.service.DirectoryWatcher         : Stopped directory watching
+2025-07-02T00:35:19.216+02:00 ERROR 7077 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Error in directory watcher: null
+
+java.nio.file.ClosedWatchServiceException: null
+	at java.base/sun.nio.fs.AbstractWatchService.checkOpen(AbstractWatchService.java:80) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.checkKey(AbstractWatchService.java:92) ~[na:na]
+	at java.base/sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:119) ~[na:na]
+	at de.mika.hhn.eventlogaggregator.service.DirectoryWatcher.watchDirectory(DirectoryWatcher.java:93) ~[classes/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-07-02T00:35:19.220+02:00  INFO 7077 --- [event-log-aggregator] [DirectoryWatcher] d.m.h.e.service.DirectoryWatcher         : Directory watcher thread stopped

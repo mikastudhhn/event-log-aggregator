@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+ela:
+  aggregation:
+    windows:
+      hourly: PT1H
+      daily: PT24H
+      weekly: PT168H
+  directories:
+    inbox: data/inbox
+    logs: logs
+  scheduler:
+    aggregation-interval: 1000
+  sse:
+    push-interval: 10000
+
+spring:
+  application:
+    name: event-log-aggregator
+  integration:
+    poller:
+      default-poller:
+        fixed-rate: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    de.mika.hhn.eventlogaggregator: INFO
+    de.mika.hhn.eventlogaggregator.service.InMemoryMetricRepository: WARN
+    de.mika.hhn.eventlogaggregator.service.AggregatorScheduler: WARN
+    org.springframework.integration: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/application.log 

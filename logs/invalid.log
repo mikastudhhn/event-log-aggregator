@@ -1,0 +1,130 @@
+[2025-07-02T00:20:10.010710] INVALID EVENT - Reason: Schema validation failed - JSON: [
+       {
+         "type": "JOIN_CHANNEL",
+         "timestamp": "2024-01-15T10:31:00.000Z",
+         "userId": "testuser123",
+         "payload": {
+           "channel": "#lobby"
+         }
+       },
+       {
+         "type": "MESSAGE",
+         "timestamp": "2024-01-15T10:31:30.000Z",
+         "userId": "testuser456",
+         "payload": {
+           "channel": "#lobby",
+           "message": "Hello World!"
+         }
+       }
+     ]
+[2025-07-02T00:20:10.149233] INVALID EVENT - Reason: Schema validation failed - JSON: [
+  {
+    "type": "LOGIN",
+    "timestamp": "2024-01-15T10:30:00.000Z",
+    "userId": "user123",
+    "payload": {
+      "source": "web"
+    }
+  },
+  {
+    "type": "JOIN_CHANNEL",
+    "timestamp": "2024-01-15T10:30:15.000Z",
+    "userId": "user123",
+    "payload": {
+      "channel": "#lobby"
+    }
+  },
+  {
+    "type": "MESSAGE",
+    "timestamp": "2024-01-15T10:30:30.000Z",
+    "userId": "user123",
+    "payload": {
+      "channel": "#lobby",
+      "message": "Hello World!"
+    }
+  },
+  {
+    "type": "MESSAGE",
+    "timestamp": "2024-01-15T10:31:00.000Z",
+    "userId": "user456",
+    "payload": {
+      "channel": "#lobby",
+      "message": "Hi there!"
+    }
+  },
+  {
+    "type": "LOGIN",
+    "timestamp": "2024-01-15T10:31:30.000Z",
+    "userId": "user789",
+    "payload": {
+      "source": "mobile"
+    }
+  }
+] 
+[2025-07-02T00:26:16.534887] INVALID EVENT - Reason: Schema validation failed - JSON: [
+  {
+    "type": "LOGIN",
+    "timestamp": "2024-01-15T10:30:00.000Z",
+    "userId": "user123",
+    "payload": {
+      "source": "web"
+    }
+  },
+  {
+    "type": "JOIN_CHANNEL",
+    "timestamp": "2024-01-15T10:30:15.000Z",
+    "userId": "user123",
+    "payload": {
+      "channel": "#lobby"
+    }
+  },
+  {
+    "type": "MESSAGE",
+    "timestamp": "2024-01-15T10:30:30.000Z",
+    "userId": "user123",
+    "payload": {
+      "channel": "#lobby",
+      "message": "Hello World!"
+    }
+  },
+  {
+    "type": "MESSAGE",
+    "timestamp": "2024-01-15T10:31:00.000Z",
+    "userId": "user456",
+    "payload": {
+      "channel": "#lobby",
+      "message": "Hi there!"
+    }
+  },
+  {
+    "type": "LOGIN",
+    "timestamp": "2024-01-15T10:31:30.000Z",
+    "userId": "user789",
+    "payload": {
+      "source": "mobile"
+    }
+  }
+] 
+[2025-07-02T00:26:20.870231] INVALID EVENT - Reason: Schema validation failed - JSON: [
+    {
+      "type": "LOGIN",
+      "timestamp": "2024-01-15T10:35:00.000Z",
+      "userId": "jobapplicant",
+      "payload": {"source": "knuddels-mobile"}
+    },
+    {
+      "type": "JOIN_CHANNEL",
+      "timestamp": "2024-01-15T10:35:30.000Z",
+      "userId": "jobapplicant",
+      "payload": {"channel": "#job-interview"}
+    }
+  ]
+[2025-07-02T00:26:27.312566] INVALID EVENT - Reason: Schema validation failed - JSON: [{"type": "LOGIN", "timestamp": "2024-01-15T10:35:00.000Z", "userId": "jobapplicant", "payload": {"source": "knuddels-mobile"}}]
+[2025-07-02T00:27:06.571826] INVALID EVENT - Reason: Schema validation failed - JSON: [
+    {
+      "type": "LOGIN",
+      "timestamp": "2024-01-15T10:35:00.000Z", 
+      "userId": "jobapplicant",
+      "payload": {"source": "knuddels-mobile"}
+    }
+  ]

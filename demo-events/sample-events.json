@@ -1,0 +1,44 @@
+[
+  {
+    "type": "LOGIN",
+    "timestamp": "2024-01-15T10:30:00.000Z",
+    "userId": "user123",
+    "payload": {
+      "source": "web"
+    }
+  },
+  {
+    "type": "JOIN_CHANNEL",
+    "timestamp": "2024-01-15T10:30:15.000Z",
+    "userId": "user123",
+    "payload": {
+      "channel": "#lobby"
+    }
+  },
+  {
+    "type": "MESSAGE",
+    "timestamp": "2024-01-15T10:30:30.000Z",
+    "userId": "user123",
+    "payload": {
+      "channel": "#lobby",
+      "message": "Hello World!"
+    }
+  },
+  {
+    "type": "MESSAGE",
+    "timestamp": "2024-01-15T10:31:00.000Z",
+    "userId": "user456",
+    "payload": {
+      "channel": "#lobby",
+      "message": "Hi there!"
+    }
+  },
+  {
+    "type": "LOGIN",
+    "timestamp": "2024-01-15T10:31:30.000Z",
+    "userId": "user789",
+    "payload": {
+      "source": "mobile"
+    }
+  }
+] 
